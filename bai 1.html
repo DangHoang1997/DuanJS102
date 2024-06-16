@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <style>
+
+        </style>
+    </head>
+
+    <body>
+        <header>
+        <div class="container text-center d-flex justify-content-center">
+        
+        <div class="ngaylam text-center mt-5 me-3">
+            
+            
+            <input class="border-2 bg-light"  id="luong1Ngay" type="number" placeholder="Lương Một Ngày">
+        </div>
+        <div class="giolam text-center mt-5">
+            
+            <input  class="border-2 bg-light"  id="soNgay" type="number" placeholder="Số Giờ Làm" style="color: black;">
+        </div>
+            
+        </div>
+        <br>
+        <div class="nutbam text-center">
+             <button class="btn btn-secondary" id="tinhLuong" onclick="tinhLuong()">Bám Vào Đây</button>    
+            <h3  id="ketQua" style="font-size: 30px;"> Hiển thị ở đây </h3>
+        </div>
+        </header>
+        
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            // ghi ở dây 
+            
+            
+            
+        
+
+            document.getElementById("tinhLuong").onclick = function () {
+                // input :  lay gia tri trong o input (luong1Ngay, soNgay)
+                var luong1Ngay = document.getElementById("luong1Ngay").value;
+                var soNgay = document.getElementById("soNgay").value;
+
+
+                // process : tinh tien luong = luong1Ngay * soNgay
+                var ketQua = new Intl.NumberFormat().format(luong1Ngay * soNgay);
+
+
+                
+                // output : hien thi ket qua = luong1Ngay * soNgay
+                 var tagh1 = document.getElementById("ketQua");
+                tagh1.innerHTML =ketQua +  `VNĐ ` ;
+            }
+        </script>
+    </body>
+</html>

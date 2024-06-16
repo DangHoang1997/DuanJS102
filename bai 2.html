@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <style>
+            .header.minder{
+                margin-top: 50px;
+            }
+            .col-lg-4.item{
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section>
+        <div class="container header minder">
+            <div class="row">
+                <div class="col-lg-4 item">
+                        <input id="thu1" type="number" placeholder="Ô thứ 1">
+                </div>
+                <div class="col-lg-4 item">
+                    <input id="thu2" type="number" placeholder="Ô thứ 2">
+                </div>
+                <div class="col-lg-4 item">
+                    <input id="thu3" type="number" placeholder="Ô thứ 3">
+                </div>
+                <div class="col-lg-4 item">
+                    <input id="thu4" type="number" placeholder="Ô thứ 4">
+                </div>
+                <div class="col-lg-4 item">
+                    <input id="thu5" type="number" placeholder="Ô thứ 5">
+                </div>
+            </div>
+
+
+            <button class="btn btn-success mt-5" id="tinhTrungBinh">Giá trị Trung Bình</button>
+            <h1 class="mt-5">Kết Quả Là : <span id="ketQua"></span></h1>
+
+        </div>
+        </section>
+        
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+        <script>
+            document.getElementById("tinhTrungBinh").onclick = function () {
+                // lấy giá trị và ép kiểu number cho 5 ô nhập 
+                var thu1 =Number (document.getElementById("thu1").value);
+                var thu2 =Number (document.getElementById("thu2").value);
+                var thu3 =Number (document.getElementById("thu3").value);
+                var thu4 =Number (document.getElementById("thu4").value);
+                var thu5 =Number (document.getElementById("thu5").value);
+                // xử lý cộng tất cả /5 
+                var ketQua = (thu1 + thu2 + thu3 + thu4 + thu5) / 5;
+                // hiển thị kết quả
+                document.getElementById("ketQua").innerHTML = ketQua;
+            }
+        </script>
+    </body>
+</html>
